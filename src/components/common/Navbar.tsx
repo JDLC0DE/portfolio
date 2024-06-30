@@ -7,10 +7,13 @@ import { IoClose } from "react-icons/io5";
 import { MdWbSunny } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
-import { AsideMenu } from "../aside-menu";
-import { NavbarProps } from "./navbar.type";
-import { useDarkMode } from "@/hooks/useDarkMode";
-import { MENU_ITEMS } from "@/assets/constants/navbar.constant";
+import { AsideMenu } from "./AsideMenu";
+import { useDarkMode } from "@/hooks/common/useDarkMode";
+import { MENU_ITEMS } from "@/assets/constants/navbar";
+
+interface NavbarProps {
+  isOpen?: boolean;
+}
 
 export const Navbar: React.FC<NavbarProps> = () => {
   const [theme, toggleTheme] = useDarkMode();

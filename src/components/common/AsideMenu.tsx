@@ -1,9 +1,17 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect } from "react";
+import { IconType } from "react-icons";
 
-import { AsideMenuProps } from "./aside-menu.type";
-import { useScreenSize } from "@/hooks/useScreenSize";
+import { useScreenSize } from "@/hooks/common/useScreenSize";
+import { MENU_ITEMS } from "@/assets/constants/navbar";
+
+interface AsideMenuProps {
+  isOpen?: boolean;
+  themeIcon: IconType;
+  toggleTheme: () => void;
+  options: typeof MENU_ITEMS;
+}
 
 export const AsideMenu: React.FC<AsideMenuProps> = ({
   isOpen,
