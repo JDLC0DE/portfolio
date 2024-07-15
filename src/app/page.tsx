@@ -1,5 +1,9 @@
-import Image from "next/image";
+import { MyProfile } from "@/components/presentation/MyProfile";
 
 export default function Home() {
-  return <main className="container mx-auto px-4"></main>;
+  return (
+    <main className="container mx-auto px-4">
+      <MyProfile />
+    </main>
+  );
 }
