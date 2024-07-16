@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { Button } from "../common/Button";
 
 export const MyProfile = () => {
   return (
-    <div className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-24">
+    <div className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-16 md:mt-24">
       <picture className="rounded-full bg-pastel-sky overflow-hidden">
         <Image
           src="/images/avatar.webp"
@@ -22,6 +23,14 @@ export const MyProfile = () => {
         mobile, con experiencia en la creación de soluciones innovadoras y
         escalables.
       </p>
+      <div className="flex flex-col sm:flex-row gap-5 items-center min-w-60 sm:min-w-96">
+        <Button variant="container" className="w-full">
+          Contactar
+        </Button>
+        <Button variant="outline" className="w-full">
+          Descargar CV
+        </Button>
+      </div>
     </div>
   );
 };
