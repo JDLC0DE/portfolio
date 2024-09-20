@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" height="52px"
+  viewBox="0 0 42 52" version="1.1">
+  <defs>
+    <linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0.04" y1="0.27" x2="0.759" y2="0.529"
+      gradientTransform="matrix(7.382812,0,0,7.378906,19.851562,38.550781)">
+      <stop offset="0%" />
+      <stop stop-opacity="0" offset="100%" />
+    </linearGradient>
+  </defs>
+  <g id="surface1">
+    <path fill="#FDFDFD" fill-opacity=".8"
+      d="M 25.921875 0 L 0 25.917969 L 8.039062 33.792969 L 41.835938 0 Z M 25.757812 23.785156 L 11.8125 37.730469 L 19.851562 45.929688 L 27.890625 37.894531 L 41.835938 23.785156 Z M 25.757812 23.785156 " />
+    <path fill="white" fill-opacity=".18"
+      d="M 19.851562 45.929688 L 25.921875 52 L 41.835938 52 L 27.890625 37.894531 Z M 19.851562 45.929688 " />
+    <path fill="#FDFDFD" fill-opacity=".4"
+      d="M 11.8125 37.730469 L 19.6875 29.855469 L 27.890625 37.894531 L 19.851562 45.929688 Z M 11.8125 37.730469 " />
+    <path fill-opacity=".8" fill="url(#a)"
+      d="M 19.851562 45.929688 L 26.578125 43.632812 L 27.234375 38.550781 Z M 19.851562 45.929688 " />
+  </g>
+</svg>

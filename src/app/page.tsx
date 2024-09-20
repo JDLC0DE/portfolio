@@ -1,11 +1,11 @@
-import { MyProfile } from "@/components/presentation/MyProfile";
-import { Technologies } from "@/components/presentation/Technologies";
+import { MyProfile } from '@/components/presentation/MyProfile'
+import { Technology } from '@/components/presentation/Technology'
 
 export default function Home() {
   return (
     <main className="container mx-auto px-4">
       <MyProfile />
-      <Technologies />
+      <Technology />
     </main>
-  );
+  )
 }

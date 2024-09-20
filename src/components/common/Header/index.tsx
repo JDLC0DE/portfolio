@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { FC } from "react";
+import Link from 'next/link'
+import { FC } from 'react'
 
-import { MobileMenu } from "./parts/MobileMenu";
-import { MENU_ITEMS } from "@/assets/constants/navbar";
-import { ToggleTheme } from "./parts/ToggleTheme";
+import { MobileMenu } from './parts/MobileMenu'
+import { MENU_ITEMS } from '@/data/constants/navbar'
+import { ToggleTheme } from './parts/ToggleTheme'
 
 interface HeaderProps {
-  isOpen?: boolean;
+  isOpen?: boolean
 }
 
 export const Header: FC<HeaderProps> = () => {
@@ -18,7 +18,7 @@ export const Header: FC<HeaderProps> = () => {
         <nav className="container mx-auto px-4 lg:px-32 xl:px-64 py-[18px] flex justify-between items-center text-zinc-950 dark:text-white">
           <span className="text-xl font-semibold">J. DLCode</span>
           <ul className="flex items-center gap-10 max-md:hidden">
-            {MENU_ITEMS.map((item) => (
+            {MENU_ITEMS.map(item => (
               <li
                 key={item.title}
                 className="inline-flex items-center cursor-pointer"
@@ -34,5 +34,5 @@ export const Header: FC<HeaderProps> = () => {
         </nav>
       </header>
     </>
-  );
-};
+  )
+}
