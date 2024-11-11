@@ -1,9 +1,10 @@
-import Image from "next/image";
-import { Button } from "../common/Button";
+import Image from 'next/image'
+
+import { CustomButton } from '@/components/blocks/CustomButton'
 
 export const MyProfile = () => {
   return (
-    <div className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-16 md:mt-24">
+    <section className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-16 md:mt-24">
       <picture className="rounded-full bg-pastel-sky overflow-hidden">
         <Image
           src="/images/avatar.webp"
@@ -13,7 +14,7 @@ export const MyProfile = () => {
         />
       </picture>
       <h1 className="text-3xl md:text-5xl text-zinc-950 dark:text-white text-center font-bold text-balance">
-        Hey, Soy{" "}
+        Hey, Soy{' '}
         <span className="bg-clip-text text-transparent bg-pastel-sky">
           Joseph De La Cruz
         </span>
@@ -24,13 +25,23 @@ export const MyProfile = () => {
         escalables.
       </p>
       <div className="flex flex-col sm:flex-row gap-5 items-center min-w-60 sm:min-w-96">
-        <Button variant="container" className="w-full">
+        <CustomButton
+          variant="solid"
+          size="lg"
+          radius="full"
+          className="w-full"
+        >
           Contactar
-        </Button>
-        <Button variant="outline" className="w-full">
+        </CustomButton>
+        <CustomButton
+          variant="bordered"
+          size="lg"
+          radius="full"
+          className="w-full"
+        >
           Descargar CV
-        </Button>
+        </CustomButton>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}

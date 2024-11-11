@@ -9,7 +9,7 @@ export const ToggleTheme: FC = () => {
   const ThemeIcon = theme === 'light' ? IoMdMoon : MdWbSunny
 
   return (
-    <button className="max-md:hidden text-lg" onClick={toggleTheme}>
+    <button className="text-2xl md:text-lg" onClick={toggleTheme}>
       <ThemeIcon />
     </button>
   )

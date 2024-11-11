@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { TECHNOLOGIES } from '@/data/constants/technologies'
 import { useDarkMode } from '@/hooks/useDarkMode'
+import { TECHNOLOGIES } from '@integration/data/constants/technologies'
 
 export const TechnologieScroll = () => {
   const [theme] = useDarkMode()

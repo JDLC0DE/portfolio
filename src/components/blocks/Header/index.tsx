@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { FC } from 'react'
 
 import { MobileMenu } from './parts/MobileMenu'
-import { MENU_ITEMS } from '@/data/constants/navbar'
 import { ToggleTheme } from './parts/ToggleTheme'
+import { MENU_ITEMS } from '@integration/data/constants/navbar'
 
 interface HeaderProps {
   isOpen?: boolean

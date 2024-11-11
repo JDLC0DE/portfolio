@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { SOCIAL } from "@/components/common/Footer/utils/constants";
+import { SOCIAL } from '@integration/data/constants/footer'
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="mt-auto bg-zinc-900">
+    <footer className="bg-zinc-900">
       <div className="container mx-auto px-4 lg:px-32 xl:px-64">
         <div className="flex flex-col md:flex-row-reverse gap-10 justify-between py-10 md:py-20">
           <div className="space-y-5">
@@ -14,8 +14,8 @@ export const Footer = () => {
               Social
             </h4>
             <ul className="flex gap-3 md:gap-4 items-center text-white">
-              {SOCIAL.map((social) => {
-                const SocialIcon = social.icon;
+              {SOCIAL.map(social => {
+                const SocialIcon = social.icon
 
                 return (
                   <li key={social.key} className="text-2xl">
@@ -23,7 +23,7 @@ export const Footer = () => {
                       <SocialIcon />
                     </Link>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>
@@ -39,10 +39,10 @@ export const Footer = () => {
           </div>
         </div>
         <div className="text-white text-[10px] md:text-xs text-center py-8 border-t border-t-zinc-600">
-          @Copyrigth {currentYear}. Hecho por{" "}
+          @Copyrigth {currentYear}. Hecho por{' '}
           <b className="font-bold">Joseph De La Cruz</b>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

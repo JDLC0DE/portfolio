@@ -1,21 +1,17 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { IoMdMoon } from 'react-icons/io'
-import { MdWbSunny } from 'react-icons/md'
 import { IoClose } from 'react-icons/io5'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 
 import { useScreenSize } from '@/hooks/useScreenSize'
-import { MENU_ITEMS } from '@/data/constants/navbar'
-import { useDarkMode } from '@/hooks/useDarkMode'
+import { MENU_ITEMS } from '@integration/data/constants/navbar'
+import { ToggleTheme } from './ToggleTheme'
 
 export const MobileMenu = () => {
-  const [theme, toggleTheme] = useDarkMode()
   const [isOpen, setIsOpen] = useState(false)
   const { width } = useScreenSize()
   const isTablet = width < 768
-  const ThemeIcon = theme === 'light' ? IoMdMoon : MdWbSunny
 
   const handleMenu = () => {
     setIsOpen(!isOpen)
@@ -52,9 +48,7 @@ export const MobileMenu = () => {
 
         <footer className="border-t border-t-zinc-300 dark:border-t-zinc-600 text-zinc-400 dark:text-white absolute inset-x-0 bottom-0">
           <div className="container mx-auto px-4 py-[18px] flex">
-            <button className="text-2xl" onClick={toggleTheme}>
-              <ThemeIcon />
-            </button>
+            <ToggleTheme />
           </div>
         </footer>
       </aside>

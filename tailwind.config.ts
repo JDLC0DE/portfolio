@@ -1,11 +1,20 @@
 import type { Config } from 'tailwindcss'
-import flowbite from 'flowbite-react/tailwind'
+import { nextui } from '@nextui-org/react'
 
 const config: Config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', flowbite.content()],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        gray: {
+          A100: '#b2b2b2',
+          A200: '#2a2a2a'
+        }
+      },
       animation: {
         'infinite-scroll': 'loop 10s linear infinite'
       },
@@ -20,6 +29,6 @@ const config: Config = {
       }
     }
   },
-  plugins: [flowbite.plugin()]
+  plugins: [nextui()]
 }
 export default config

@@ -1,11 +1,5 @@
-import { MyProfile } from '@/components/presentation/MyProfile'
-import { Technology } from '@/components/presentation/Technology'
+import { MainLayout } from '@/components/layouts/MainLayout'
 
 export default function Home() {
-  return (
-    <main className="container mx-auto px-4">
-      <MyProfile />
-      <Technology />
-    </main>
-  )
+  return <MainLayout />
 }
