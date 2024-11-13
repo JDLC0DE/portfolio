@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { FC } from 'react'
 
+import { handleScroll } from '@/utils/header'
 import { MobileMenu } from './parts/MobileMenu'
 import { ToggleTheme } from './parts/ToggleTheme'
 import { MENU_ITEMS } from '@integration/data/constants/navbar'
@@ -21,9 +21,10 @@ export const Header: FC<HeaderProps> = () => {
             {MENU_ITEMS.map(item => (
               <li
                 key={item.title}
+                onClick={() => handleScroll(item.sectionId)}
                 className="inline-flex items-center cursor-pointer"
               >
-                <Link href={item.link}>{item.title}</Link>
+                {item.title}
               </li>
             ))}
             <li className="inline-flex items-center cursor-pointer">

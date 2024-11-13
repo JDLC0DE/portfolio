@@ -1,18 +1,18 @@
 export const MENU_ITEMS = [
   {
-    title: "Home",
-    link: "#home",
+    title: 'Inicio',
+    sectionId: 'profile'
   },
   {
-    title: "Projects",
-    link: "#projects",
+    title: 'Proyectos',
+    sectionId: 'projects'
   },
   {
-    title: "Experience",
-    link: "#experience",
+    title: 'Experiencia',
+    sectionId: 'experience'
   },
   {
-    title: "Contact",
-    link: "#contact",
-  },
-];
+    title: 'Contactar',
+    sectionId: 'contact'
+  }
+]

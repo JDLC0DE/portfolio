@@ -7,6 +7,7 @@ import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { useScreenSize } from '@/hooks/useScreenSize'
 import { MENU_ITEMS } from '@integration/data/constants/navbar'
 import { ToggleTheme } from './ToggleTheme'
+import { handleScroll } from '@/utils/header'
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,11 +38,13 @@ export const MobileMenu = () => {
         )}
       >
         <ul className="container mx-auto px-4 text-zinc-500 dark:text-white mt-5 space-y-6">
-          {MENU_ITEMS.map(option => (
-            <li key={option.title} className="py-2">
-              <Link className="" href={option.link}>
-                {option.title}
-              </Link>
+          {MENU_ITEMS.map(item => (
+            <li
+              key={item.title}
+              onClick={() => handleScroll(item.sectionId)}
+              className="py-2"
+            >
+              {item.title}
             </li>
           ))}
         </ul>

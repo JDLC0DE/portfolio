@@ -4,7 +4,10 @@ import { CustomButton } from '@/components/blocks/CustomButton'
 
 export const MyProfile = () => {
   return (
-    <section className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-16 md:mt-24">
+    <section
+      id="profile"
+      className="max-w-[42.5rem] mx-auto flex flex-col items-center gap-y-5 md:gap-y-10 mt-16 md:mt-24"
+    >
       <picture className="rounded-full bg-pastel-sky overflow-hidden">
         <Image
           src="/images/avatar.webp"
