@@ -1,15 +1,20 @@
-import { ProjectCard } from '@/components/blocks/ProjectCard'
-import { PROJECTS } from '@integration/data/constants/projects'
+import { useMemo } from 'react'
 import Link from 'next/link'
 
+import { Carousel } from '@/components/blocks/Carousel'
+import { ProjectCard } from '@/components/blocks/ProjectCard'
+import { PROJECTS } from '@integration/data/constants/projects'
+
 export const ProjectCardList = () => {
-  return (
-    <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-      {PROJECTS.map(project => (
+  const slides = useMemo(
+    () =>
+      PROJECTS.map(project => (
         <Link key={project.title} href={project.url} target="_blank">
           <ProjectCard title={project.title} image={project.image} />
         </Link>
-      ))}
-    </div>
-  )
+      )),
+    []
+  ) as JSX.Element[]
+
+  return <Carousel slides={slides} options={{ slidesToScroll: 'auto' }} />
 }

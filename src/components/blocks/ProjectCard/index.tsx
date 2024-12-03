@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: FC<ProjectCardProps> = ({ title, image }) => {
   return (
-    <div className="h-[300px] w-auto max-w-[390px] rounded-[18px] cursor-pointer overflow-hidden">
+    <div className="h-[300px] w-full rounded-[18px] cursor-pointer overflow-hidden">
       <picture className="block w-full h-[80%] rounded-t-[inherit] overflow-hidden">
         <Image
           src={image}
